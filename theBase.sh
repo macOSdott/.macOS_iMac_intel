@@ -428,6 +428,11 @@ defaults write com.apple.Safari HistoryAgeInDaysLimit -int 3
 # Don't Print headers and footers
 defaults write com.apple.Safari PrintHeadersAndFooters -bool false
 
+# Set DuckDuckgo as search engine
+defaults write -g NSPreferredWebServices '{NSWebServicesProviderWebSearch = { NSDefaultDisplayName = DuckDuckGo; NSProviderIdentifier = "com.duckduckgo.www"; }; }'
+defaults write com.apple.Safari SearchProviderIdentifier -string com.duckduckgo.www
+defaults write com.apple.Safari SearchProviderShortName -string DuckDuckGo
+
 ###############################################################################
 # Mail                                                                        #
 ###############################################################################
